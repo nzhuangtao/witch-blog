@@ -1,0 +1,21 @@
+.banner{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.home-banner{
+    background: url(../assets/images/banner.png) 50% 0 no-repeat;
+    background-size: 100% 100%;
+}
+.box{
+    display: flex;
+    background: url(../assets/images/bg.jpg) 50% 0 repeat-y;
+}
+.blog-list{
+    flex: 1;
+}
+.right-bar{
+    width: 400px;
+}
+
+
