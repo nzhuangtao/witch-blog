@@ -1,4 +1,7 @@
-
+.left-bar{
+    flex: 1;
+   
+}
 .blog{
     display: flex;
     flex-direction: column;

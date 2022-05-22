@@ -20,7 +20,11 @@ function App() {
           <Route path='/laboratory' element={<Laboratory />}></Route>
         </Routes>
       </main>
-      <footer></footer>
+      <footer>
+          <div className=''>
+
+          </div>
+      </footer>
     </div>
   );
 }

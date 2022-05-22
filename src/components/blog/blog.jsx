@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom"
 import "./blog.css"
-import preview from "../../assets/images/pop_trader.jpg";
+import preview from "../../assets/images/img_gothic.png";
 export default function Blog() {
     return (
         <li className="blog">
-            <h2 className="blog-title">
+            {/* <h2 className="blog-title">
                 <Link to="/">文章标题</Link>
-            </h2>
+            </h2> */}
             <img src={preview} alt="" className="preview"/>
-            <div className="blog-content">
+            {/* <div className="blog-content">
                 文章的内容简介，这里随便写点什么
                 1.首页banner遇到了问题，没有合适的素材，非常尴尬
                 2.昨晚看了剧情，有点被恶心了
@@ -17,7 +17,7 @@ export default function Blog() {
                 5.关于还没有做，最后一天在做吧
                 6.分类方面，也还没想好
                 7.争取4天完成，首页与详情
-            </div>
+            </div> */}
         </li>
     )
 }
