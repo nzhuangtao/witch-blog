@@ -1,0 +1,19 @@
+.home{
+    background-image: url(../assets/images/bg.jpg);
+    background-repeat: repeat-y;
+    background-position: 50% 0;
+}
+.home-banner{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../assets/images/home_header_bg.jpg) 50% 0 no-repeat;
+    background-size: 100% 100%;
+}
+.home-line{
+    height: 200px;
+    background: url(../assets/images/home_header_line.png) 50% 0 no-repeat;
+    background-size: 100% 100%;
+}
+
+

@@ -3,21 +3,19 @@ import "./blog.css"
 import preview from "../../assets/images/img_gothic.png";
 export default function Blog() {
     return (
-        <li className="blog">
-            {/* <h2 className="blog-title">
-                <Link to="/">文章标题</Link>
-            </h2> */}
+        <li className="blog">    
             <img src={preview} alt="" className="preview"/>
-            {/* <div className="blog-content">
-                文章的内容简介，这里随便写点什么
-                1.首页banner遇到了问题，没有合适的素材，非常尴尬
-                2.昨晚看了剧情，有点被恶心了
-                3.书橱没想好怎么展示，而且没办法顺利定位到指定地点
-                4.实验室首页确定了，需要做些试剂瓶，古书
-                5.关于还没有做，最后一天在做吧
-                6.分类方面，也还没想好
-                7.争取4天完成，首页与详情
-            </div> */}
+            <div className="blog-info">
+                <h2 className="blog-title">文章的标题</h2>
+                <div className="blog-brief">
+                    <p className="brief-title">简要</p>
+                    <p className="brief-content">
+                        现如今，要说比较火的编程语言当属 JavaScript 和 Python 了，这两门语言都可以独立编写前端页面、后端服务器、
+                        手机 APP、电脑客户端等等，无所不能。不过，不同的编程语言有不同的侧重点。比如 JavaScript 写网页得心应手，
+                        Python 处理大数据信手拈来。那么，能不能取两者的优点，构建一个跨平台客户端框架呢？这就有了今天的主角
+                    </p>
+                </div>
+            </div>
         </li>
     )
 }

@@ -1,0 +1,29 @@
+.desk{
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: linear-gradient(45deg, #FDC830,#F37335);
+    border-bottom: 4px solid #000;
+}
+.book-heap{
+    position: absolute;
+    bottom: 50px;
+    left: 15px;
+}
+.book{
+    width: 200px;
+    height: 30px;
+    border: 2px solid #000;
+}
+.book-1{
+    background: #00B4DB;
+}
+.book-2{
+    background: #89216B;
+}
+.book-3{
+    background: #0083B0;
+}

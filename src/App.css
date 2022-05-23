@@ -6,7 +6,15 @@
   border: none;
   outline: none;
 }
+html{
+  font-family: pingfang;
+}
+@font-face {
+  font-family: pingfang;
+  src: url(../src/assets/fonts/pingfang.ttf);
+}
 /* 全局样式 */
 .hide{
   display: none;
 }
+
