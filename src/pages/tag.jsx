@@ -1,67 +1,53 @@
 import "./tag.css"
-import{ useState} from "react";
-import tag1 from "../assets/images/pop_trader.jpg";
+import{ useEffect, useState} from "react";
 const tags = [
     'css','js','web安全','canvas','svg','node','mysql','性能调优','webpack','webgl','cocos'
 ]
-export default function Tag(){
+export default function Tag(props){
     let [currentTabIndex, setCurrentIndex] = useState(0);
-    let createTabItem = ()=>{
-        let items = [];
+    let [cache,setCache] = useState({});
+    let [articles,setArticles] = useState({});
+    function changeTab(tabIndex){
+        // if(tabIndex === currentTabIndex) return false;
+
+        // let tag = tags[tabIndex];
+        // if(cache[tag]) {
+        //     let _articles = cache[tag];
+        //     setArticles(_articles);
+        // } else {
+        //     // 请求
+            
+        //     setCache(cache[tag]);
+        //     setArticles(cache[tag]);
+           
+        // }
+    }
+    useEffect(()=>{
+        console.log('tag组件被渲染');
+    });
+    function addTabItems(){
+        let tabItems = [];
         for(let i=0;i<tags.length;i++){
-            items.push(
-                <div 
-                    style={{animationDelay:i*0.2+'s'}}
-                    className={"tab-item "+(currentTabIndex===i?'active':"")} 
-                    key={i} 
-                    onClick={()=>handleTabClick(i)}>
-                    {tags[i]}
+            tabItems.push(
+                <div className="tab-item" key={i} onClick={()=>changeTab(i)}>
+                    <span className="tag-name">{tags[i]}</span>
                 </div>
-            )
-        }
-        return items;
-    };
-    function  createTabContent(params) {
-        let items = [];
-        for(let i=0;i<tags.length;i++){
-            items.push(
-                (
-                    <div className={"tab-content "+(currentTabIndex==i?'tab-content--active':'')} key={i}>
-                        <div>JavaScript类型总共有</div>
-                        <ul>
-                            <li 
-                                
-                                className="tag-blog-title">{tags[i]}</li>
-                            <li className="tag-blog-title">{tags[i]}</li>
-                            <li className="tag-blog-title">{tags[i]}</li>
-                            <li className="tag-blog-title">{tags[i]}</li>
-                            <li className="tag-blog-title">{tags[i]}</li>
-                            <li className="tag-blog-title">{tags[i]}</li>
-                            <li className="tag-blog-title">{tags[i]}</li>
-                            <li className="tag-blog-title">{tags[i]}</li>
-                        </ul>
-                    </div>
-                )
-            )
-        }
-        return items;
-    };
-    let handleTabClick = (tabIndex)=>{
-        setCurrentIndex(tabIndex);
+            );
+        };
+        return tabItems;
     }
     return (
         <section className="tag">
-            <div className="head"></div>
             <div className="tabs">
                 <div className="tab">
-                   {
-                       createTabItem()
-                   }
+                   {addTabItems()}
                 </div>
                 <div className="tab-contents">
-                   {
-                       createTabContent()
-                   }
+                    <div className="tab-content">
+                        <h2 className="tag-title">
+                            
+                        </h2>
+                    </div>
                 </div>
             </div>
         </section>

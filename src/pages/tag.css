@@ -1,57 +1,61 @@
 .tag{
-    padding: 15px;
     background: url(../assets/images/banner.png) 50% 0 no-repeat fixed;
 }
+.tabs{
+    display: flex;
+}
 .tab{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(4,1fr);
-    grid-gap: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    width: 300px;
+    box-sizing: border-box;
 }
 .tab-item{
     display: block;
-    padding: 12px;
-    background: #e9d1af;
+    padding: 15px 0;
+    cursor: pointer;
+    overflow: hidden;
+    font-size: 24px;
     border-radius: 4px;
     color: #fff;
-    cursor: pointer;
-    animation: fadeIn 0.2s linear forwards;
-    opacity: 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 10px 10px 12px #50170f;
+}
+.tab-item:hover{
+    color: #ffc038;
+}
+.tab-item+.tab-item{
+    margin-top: 15px;
 }
 .tab-contents{
-    position: relative;
-    margin-top: 30px;
-    min-height: 100vh;
-    background: rgba(255,255,255,.3);
+    flex: 1;
+    box-sizing: border-box;
     overflow: hidden;
+    background-color: rgba(229,214,180,.6);
+    background-image: url(../assets/images/dronia_img01.png);
+    background-repeat: no-repeat;
+    background-position: right 50%;
+    background-attachment: fixed;
+    box-sizing: border-box;
 }
 .tab-content{
-    position: absolute;
-    z-index: 10px;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    padding:  15px;
-    box-sizing: border-box;
-    transform: translate(0%,100%);
-    transition: transform 0.3s,opacity 0.3s;
-    will-change: transform;
-    opacity: 0;
+    padding: 15px 30px;
+    min-height: 100vh;
 }
-.active{
-    color: #DA4453;
+
+.tag-title{
+    font-size: 30px;
+    color: #fff;
+    text-shadow: 0 0 20px #50170f;
+    letter-spacing: 3px;
 }
-.tab-content--active{
-    display: block;
-    transform: translate(0,0);
-    opacity: 1;
+.tag .blog-title{
+    color: red;
+    text-shadow: 0 0 10px #fff;
+    font-size: 24px;
+    letter-spacing: 2px;
+    line-height: 1.5;
 }
-@keyframes fadeIn{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
+
